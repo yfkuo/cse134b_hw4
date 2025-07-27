@@ -1,6 +1,6 @@
 # cse134b_hw4
 
-- Netify: 
+- Netify: [link](https://cse134bhw-4.netlify.app/)
 
 ## Part 1:
 ### a:
