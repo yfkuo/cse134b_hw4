@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form with JS</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <style>
+        /* internal css */
+        .flash-error {
+            animation: flash 0.5s ease-in-out;
+        }
+
+        @keyframes flash {
+            0% { background-color: #ffe5e5; }
+            100% { background-color: inherit; }
+        }
+
+        #comments-counter {
+            font-size: 1.4vw;
+            color: #444;
+        }
+
+        [name="form-errors"] {
+            font-size: 1.5vw;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="flex-container">
+        <header>
+            <h1><b>Contact Form (JS)</b></h1>
+        </header>
+
+        <section class="main-section">
+            <h2 style="display: none;">My Projects</h2>
+            <nav>
+                <a href="resume.html" class="nav-box">RESUME</a>
+                <a href="projects.html" class="nav-box">PROJECTS</a>
+                <a href="life.html" class="nav-box">LIFE</a>
+                <a href="form-no-js.html" class="nav-box">form-no-js</a>
+                <a href="../index.html" class="nav-box">HOME</a>
+            </nav>
+
+            <form action="https://httpbin.org/post" method="post" id="contact-form" novalidate>
+                <form-field>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="100" pattern="[A-Za-z\s\-']+" autofocus>
+                    <output id="name-error" name="name-error">Please enter your name (letters, spaces, - and ').</output>
+                </form-field>
+
+                <form-field>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <output id="email-error" name="email-error">Please enter a valid email address.</output>
+                </form-field>
+
+                <form-field>
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" required minlength="2" maxlength="450"></textarea>
+                    <output id="comments-info" name="comments-info">Enter a brief comment (2–450 characters).</output>
+                    <p id="comments-counter" aria-live="polite">450 characters remaining</p>
+                </form-field>
+
+                <input type="hidden" id="form-errors" name="form-errors" value="">
+
+
+                <input type="hidden" name="possible_bot" value="true">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <footer>
+            <h3>Contact Information:</h3>
+            <address>
+                Email: ykkk@example.com<br>
+                GitHub: github.com/yfkuo<br>
+            </address>
+            <p>&copy; 2025 Fiona Kuo. All rights reserved.</p>
+        </footer>
+    </main>
+    <script src="../js/form-with-js-validation.js"></script>
+    <script src="../js/theme.js" defer></script>
+    <noscript>
+        <p style="color:red;">JavaScript is required for theme switching.</p>
+    </noscript>
+</body>
+</html>

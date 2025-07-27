@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form no JS</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <style>
+        /* internal css */
+        input:invalid + output,
+        textarea:invalid + output {
+            display: block;
+        }
+
+        input:invalid, 
+        textarea:invalid {
+            border: 0.3vw solid red;
+        }
+
+        input:valid, 
+        textarea:valid {
+            border: 0.3vw solid green;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="flex-container">
+        <header>
+            <h1><b>Contact Form (no JS)</b></h1>
+        </header>
+
+        <section class="main-section">
+            <h2 style="display: none;">My Projects</h2>
+            <nav>
+                <a href="resume.html" class="nav-box">RESUME</a>
+                <a href="projects.html" class="nav-box">PROJECTS</a>
+                <a href="life.html" class="nav-box">LIFE</a>
+                <a href="form-with-js.html" class="nav-box">form-with-js</a>
+                <a href="../index.html" class="nav-box">HOME</a>
+            </nav>
+
+            <form action="https://httpbin.org/post" method="post">
+                <form-field>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="100" pattern="[A-Za-z\s\-']+" autofocus>
+                    <output name="name-error">Please enter your name (letters, spaces, - and ').</output>
+                </form-field>
+
+                <form-field>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <output name="email-error">Please enter a valid email address.</output>
+                </form-field>
+
+                <form-field>
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" required minlength="2" maxlength="450"></textarea>
+                    <output name="comments-info">Enter a brief comment (2–450 characters).</output>
+                </form-field>
+
+                <input type="hidden" name="possible_bot" value="true">
+                <button type="submit">Submit</button>
+            </form>
+
+        </section>
+
+        <footer>
+            <h3>Contact Information:</h3>
+            <address>
+                Email: ykkk@example.com<br>
+                GitHub: github.com/yfkuo<br>
+            </address>
+            <p>&copy; 2025 Fiona Kuo. All rights reserved.</p>
+        </footer>
+    </main>
+    <script src="../js/theme.js" defer></script>
+    <noscript>
+        <p style="color:red;">JavaScript is required for theme switching.</p>
+    </noscript>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIFE</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* internal css */
+        .project-box {
+            max-height: 30vh;
+        }
+        
+        /* custom font */
+        @font-face {
+            font-family: 'SpecialGothic';
+            src: url('../fonts/custom_font/SpecialGothicExpandedOne-Regular.ttf');
+        }
+
+        h4 {
+            font-family: 'SpecialGothic', sans-serif;
+        }
+        
+        /* animation, transition, transformation */
+        .project-image {
+            width: 100px;
+            height: 100px;
+            transition: width 1s, height 1s, transform 2s;
+            object-fit: cover;
+            border-radius: 1vw;
+            position: relative;      
+            z-index: 1; 
+        }
+
+        .project-image:hover {
+            width: 50px;
+            height: 50px;
+            transform: scale(5) rotate(360deg);
+            z-index: 10;
+        }
+
+        @keyframes colorAnimation {
+            0%   { background-color: #ffffff; }
+            25%  { background-color: #ccd1e7; }
+            50%  { background-color: #ffd6e0; }
+            75%  { background-color: #cde7f0; } 
+            100% { background-color: #ffffff; }
+        }
+
+        .project-box {
+            animation: colorAnimation 4s infinite;
+        }
+    </style>
+</head>
+<body>
+    <main class="flex-container">
+        <header>
+            <h1><b>LIFE</b></h1>
+        </header>
+        <section class="main-section">
+            <h2 style="display: none;">My Projects</h2>
+            <nav>
+                <a href="resume.html" class="nav-box">RESUME</a>
+                <a href="projects.html" class="nav-box">PROJECTS</a>
+                <a href="form-no-js.html" class="nav-box">form-no-js</a>
+                <a href="form-with-js.html" class="nav-box">form-with-js</a>
+                <a href="../index.html" class="nav-box">HOME</a>
+            </nav>
+
+            <section class="projects-column">
+                <h3 style="display: none;">My life</h3>
+
+                <article class="project-box">
+                    <h4>Some Travel Memories</h4>
+                    <p style="color: red;"><strong>Hover over an image to expand it! Click out or let go to zoom out.</strong></p>
+                    <p>Here are some of my favorite travel photos from various trips I've taken. Each image captures a moment that holds special meaning to me.</p>
+                    <img src="../pic/IMG_7621.jpg" alt="Travel photo 2" class="project-image">
+                    <img src="../pic/IMG_7635.jpg" alt="Travel photo 3" class="project-image">
+                    <img src="../pic/IMG_7826.jpg" alt="Travel photo 4" class="project-image">
+                    <img src="../pic/IMG_7827.jpg" alt="Travel photo 5" class="project-image">
+                    <img src="../pic/IMG_7951.jpg" alt="Travel photo 6" class="project-image">
+                    <img src="../pic/IMG_7993.jpg" alt="Travel photo 7" class="project-image">
+                    <img src="../pic/IMG_8134.jpg" alt="Travel photo 8" class="project-image">
+                    <img src="../pic/IMG_8257.jpg" alt="Travel photo 9" class="project-image">
+                    <img src="../pic/IMG_8294.jpg" alt="Travel photo 11" class="project-image">
+                    <img src="../pic/IMG_8318.jpg" alt="Travel photo 12" class="project-image">
+                </article>
+
+                <article class="project-box">
+                <h4>Food and Spots Recommendations</h4>
+                <p>
+                    These files include personal food and travel spot recommendations gathered from my own trips. 
+                    Each spreadsheet highlights restaurants, cafes, scenic areas, and must-visit attractions.
+                </p>
+                <ul>
+                    <li><a href="../travel/Honolulu.xlsx" target="_blank">📊 Honolulu.xlsx</a> – My go-to spots in Oʻahu, including poke bowls and beach cafes.</li>
+                    <li><a href="../travel/Japan.xlsx" target="_blank">📊 Japan.xlsx</a> – A city-by-city breakdown of ramen shops, shrines, and day trips.</li>
+                    <li><a href="../travel/korea.pdf" target="_blank">📄 Korea.pdf</a> – A compact travel guide and food itinerary covering Seoul and Busan.</li>
+                    <li><a href="../travel/LA.xlsx" target="_blank">📊 LA.xlsx</a> – Favorite eateries, dessert places, and cool photo spots in Los Angeles.</li>
+                    <li><a href="../travel/NewYork.xlsx" target="_blank">📊 New York.xlsx</a> – A curated list of pizza, brunch, and hidden gems across NYC boroughs.</li>
+                    <li><a href="../travel/Seattle_Vancouver.xlsx" target="_blank">📊 Seattle–Vancouver.xlsx</a> – Coffee shops, seafood joints, and scenic points in both cities.</li>
+                    <li><a href="../travel/Seattle.xlsx" target="_blank">📊 Seattle.xlsx</a> – A dedicated Seattle list with Pike Place picks and nature getaways.</li>
+                </ul>
+                </article>
+
+            </section>
+        </section>
+
+        <footer>
+            <h3>Contact Information:</h3>
+            <address>
+                Email: ykkk@example.com<br>
+                GitHub: github.com/yfkuo<br>
+            </address>
+            <p>&copy; 2025 Fiona Kuo. All rights reserved.</p>
+        </footer>
+    </main>
+    <script src="../js/theme.js" defer></script>
+    <noscript>
+        <p style="color:red;">JavaScript is required for theme switching.</p>
+    </noscript>
+</body>
+</html>
+
+
+

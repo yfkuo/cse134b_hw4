@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link id="original-css" rel="stylesheet" href="css/main.css">
+    <style>
+        /* internal css */
+        nav {
+            align-items: center;
+        }
+
+        a.nav-box {
+            padding: 1vh 1.5vw;
+            background-color: var(--header-bg-color, coral);
+            border: 0.6vw solid gray;
+            border-radius: 1vw;
+            font-size: 2.5vw;
+            color: var(--nav-box-text-color, green);
+            text-decoration: none;
+            font-weight: bold;
+            min-width: 20vw;
+            text-align: center;
+        }
+
+        .button-wrapper {
+            text-align: right;
+            font-size: 2vh;
+            margin-right: 1.5vw;
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="flex-container">
+        <header>
+            <h1><b>HOME</b></h1>
+
+            <p class="button-wrapper">
+                <small>Theme (Part 4):</small>
+                <button type="button" onclick="setTheme('original')">Original</button>
+                <button type="button" onclick="setTheme('light')">Light</button>
+                <button type="button" onclick="setTheme('dark')">Dark</button>
+            </p>
+
+            <noscript>
+            <p style="color:red;">JavaScript is required for theme switching.</p>
+            </noscript>
+        </header>
+
+        <nav>
+            <a href="other_html/resume.html" class="nav-box">RESUME</a>
+            <a href="other_html/projects.html" class="nav-box">PROJECTS</a>
+            <a href="other_html/life.html" class="nav-box">LIFE</a>
+            <a href="other_html/form-no-js.html" class="nav-box">form-no-js</a>
+            <a href="other_html/form-with-js.html" class="nav-box">form-with-js</a>
+        </nav>
+
+        <footer>
+            <h3>Contact Information:</h3>
+            <address>
+                Email: ykkk@example.com<br>
+                GitHub: github.com/yfkuo<br>
+            </address>
+            <p>&copy; 2025 Fiona Kuo. All rights reserved.</p>
+        </footer>
+    </main>
+    <script src="js/theme.js" defer></script>
+</body>
+</html>
